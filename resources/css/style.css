@@ -112,6 +112,7 @@ nav.mobile ul li a img {
   flex-wrap: wrap;
   width: 100%;
   padding: 32px 24px; /* Padding inside the banner for spacing */
+  background-color: cadetblue;
 }
 
 /* Image container styles */
@@ -135,6 +136,8 @@ nav.mobile ul li a img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #fff;
+  padding: 24px;
 }
 
 .text-content h1 {
@@ -172,6 +175,7 @@ nav.mobile ul li a img {
 
   .text-content {
     padding: 10px;
+    text-align: center;
   }
 
   .text-content h1 {
