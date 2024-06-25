@@ -1,109 +1,48 @@
-/* Reset margin, padding, and box-sizing for all elements */
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/* Remove default list styles */
-ul, ol {
-    list-style: none;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-/* Remove default link styles */
-a {
-    text-decoration: none;
-    color: inherit; /* Inherit the color from the parent element */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
-/* Remove default image border and make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border: none;
-}
-
-/* Set a more readable font for all text */
 body {
-    line-height: 1.6;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #333; /* A neutral dark color for text */
-    background-color: #fff; /* Default background color */
+	line-height: 1;
 }
-
-/* Reset form elements */
-input, button, textarea, select {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    background: none;
-    border: none;
-    outline: none;
-    box-shadow: none;
+ol, ul {
+	list-style: none;
 }
-
-button {
-    cursor: pointer; /* Show pointer cursor on buttons */
+blockquote, q {
+	quotes: none;
 }
-
-/* Remove default table styles */
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
 table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* Remove default styles for blockquote and figure */
-blockquote, figure {
-    margin: 0;
-    padding: 0;
-}
-
-/* Reset default heading styles */
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-/* Remove default fieldset, legend, and iframe styles */
-fieldset, legend, iframe {
-    border: 0;
-}
-
-/* Remove default vertical scrollbar in textarea */
-textarea {
-    resize: vertical; /* Allow only vertical resizing */
-}
-
-/* Set default styles for hidden elements */
-[hidden] {
-    display: none;
-}
-
-/* Remove default styles for address, footer, and header elements */
-address, footer, header {
-    font-style: normal;
-}
-
-/* Remove default styling for hr elements */
-hr {
-    border: none;
-    border-top: 1px solid #e0e0e0; /* Light gray color for a subtle line */
-    margin: 1em 0;
-}
-
-/* Apply a consistent box-sizing for all form elements */
-input[type="checkbox"], input[type="radio"], select {
-    box-sizing: border-box;
-}
-
-/* Remove default button and input styles */
-button, input[type="button"], input[type="submit"], input[type="reset"] {
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
