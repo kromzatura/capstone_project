@@ -45,7 +45,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header .container {
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,6 +96,7 @@ nav.mobile {
   nav.mobile ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
     width: 100%;
     margin: 0;
@@ -107,161 +108,158 @@ nav.mobile {
 }
 
 .main-content{
-position: relative;
-top: 64px;
-}
-
-.container.thesis-exhibit {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
-
-.banner {
-  background-color: #A8BBA2;
-}
-
-.banner .text-banner {
-  padding: 32px 16px;
-  text-align: left;
-}
-
-/* Image and video general styles */
-img, video {
-  width: 100%; /* Ensure the image fills the container */
-  overflow: hidden;
-}
-
-.banner .text-banner h1 {
-  font-size: 2.5rem; /* Adjusts the size of the font */
-  color: #333; /* Sets the text color */
-  margin-bottom: 20px; /* Adds space below the h1 */
-  font-weight: bold; /* Makes the font bold */
-}
-
-.banner .text-banner span {
-  display: block; /* Makes span behave like a block element for layout purposes */
-  color: #666; /* Sets the text color, adjust as needed */
-  font-size: 1.5rem; /* Adjusts the size of the font, adjust as needed */
-}
-
-.banner .text-banner button{
-  display: block;
-  margin: 24px auto 0;
-  width: 80%;
-  padding: 8px 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1.2rem;
-}
-
-/* info  */
-/* base mobile stile  */
-
-.info .image-info {
+  position: relative;
+  top: 64px;
+  }
+  
+  .container.thesis-exhibit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  
+  .banner {
+    background-color: #A8BBA2;
+  }
+  
+  .banner .text-banner {
+    padding: 32px 16px;
+    text-align: left;
+  }
+  
+  /* Image and video general styles */
+  img, video {
+    width: 100%; /* Ensure the image fills the container */
+    overflow: hidden;
+  }
+  
+  .banner .text-banner h1 {
+    font-size: 2.5rem; /* Adjusts the size of the font */
+    color: #333; /* Sets the text color */
+    margin-bottom: 20px; /* Adds space below the h1 */
+    font-weight: bold; /* Makes the font bold */
+  }
+  
+  .banner .text-banner span {
+    display: block; /* Makes span behave like a block element for layout purposes */
+    color: #666; /* Sets the text color, adjust as needed */
+    font-size: 1.5rem; /* Adjusts the size of the font, adjust as needed */
+  }
+  
+  .banner .text-banner button{
+    display: block;
+    margin: 24px auto 0;
+    width: 80%;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+  }
+  
+  /* info  */
+  /* base mobile stile  */
+  
+  .info .image-info {
+    display: none;
+  }
+  
+  .articles-info .image-small {
+    display: none;
+  }
+  
+  .article  {
+    padding: 16px;
+  }
+  
+  .article:hover {
+    background-color: lightgray;
+  }
+  
+  .article .text-small {
+    text-align: left;
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+  
+  .article .text-small h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  
+  .article .text-small .read-more {
+    display: block;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+  
+  /* cources*/
+  .container.courses {
+    background-color: white; /* Light grey background */
+    padding: 32px 16px; /* Padding around the content */
+  }
+  
+  .courses h1 {
+    font-size: 2.5rem; /* Adjusts the size of the font */
+    color: #333; /* Sets the text color */
+    margin-bottom: 20px; /* Adds space below the h2 */
+    font-weight: bold; /* Makes the font bold */
+    text-align: center; /* Centers the text */
+  }
+  
+  .course {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 16px 24px 16px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .course img, .course h3, course p {
   display: none;
-}
-
-.articles-info .image-small {
-  display: none;
-}
-
-.article  {
-  padding: 16px;
-}
-
-.article:hover {
-  background-color: lightgray;
-}
-
-.article .text-small {
-  text-align: left;
-  margin-left: 16px;
-  margin-top: 16px;
-}
-
-.article .text-small h3 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 16px;
-}
-
-
-.article .text-small .read-more {
-  display: block;
-  margin-top: 8px;
-  font-size: 1rem;
-}
-
-/* cources*/
-.container.courses {
-  background-color: white; /* Light grey background */
-  padding: 32px 16px; /* Padding around the content */
-}
-
-.courses h1 {
-  font-size: 2.5rem; /* Adjusts the size of the font */
-  color: #333; /* Sets the text color */
-  margin-bottom: 20px; /* Adds space below the h2 */
-  font-weight: bold; /* Makes the font bold */
-  text-align: center; /* Centers the text */
-}
-
-.course {
-  width: 100%;
-  margin-bottom: 8px;
-  padding: 16px 24px 16px;
-  background-color: lightgray;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-.course img, .course h3, course p {
-display: none;
-}
-
-.course h2 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-/* thesis*/
-.thesis .video-text {
-  display: none;
-}
-
-
-.container.thesis-exhibit {
-  padding: 32px 0 24px;
-}
-
-.container.thesis-exhibit h1 {
-  font-size: 2.5rem; /* Adjusts the size of the font */
-  color: #333; /* Sets the text color */
-  margin-bottom: 16px; /* Adds space below the h2 */
-  font-weight: bold; /* Makes the font bold */
-  text-align: center; /* Centers the text */
-
-}
-
-.thesis-section {
-  display: none;
-}
-
-/* footer*/
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 16px 0;
-  text-align: center;
-}
-
-.terms-privacy {
-  display: none;
-}
-
-
-
+  }
+  
+  .course h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* thesis*/
+  .thesis .video-text {
+    display: none;
+  }
+  
+  
+  .container.thesis-exhibit {
+    padding: 32px 0 24px;
+  }
+  
+  .container.thesis-exhibit h1 {
+    font-size: 2.5rem; /* Adjusts the size of the font */
+    color: #333; /* Sets the text color */
+    margin-bottom: 16px; /* Adds space below the h2 */
+    font-weight: bold; /* Makes the font bold */
+    text-align: center; /* Centers the text */
+  
+  }
+  
+  .thesis-section {
+    display: none;
+  }
+  
+  /* footer*/
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 16px 0;
+    text-align: center;
+  }
+  
+  .terms-privacy {
+    display: none;
+  }
