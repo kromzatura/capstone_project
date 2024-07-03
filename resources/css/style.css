@@ -24,46 +24,51 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  margin: 0;
   padding-top: 64px; /* To prevent content from being hidden under the fixed navbar */
   color: #333;
   background-color: #f9f9f9;
+  padding: 0 2px; /* Adds 1px padding to the entire site */
+  border-left: 1px solid black; /* Adds 1px solid black border around the site */
+  border-right: 1px solid black;
 }
 
-/* Header */
+/* Navbar */
+
 header {
-  background-color: white;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eaeaea;
   position: fixed;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 20px;
+  height: 64px;
+  padding: 0 16px;
 }
 
-.desktop-logo {
+header .logo {
   display: flex;
   align-items: center;
-}
-
-.desktop-logo img {
-  height: 32px;
-  margin-right: 8px;
-}
-
-.desktop-logo .bold {
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header .logo img {
+  height: 42px;
+}
+
+nav.desktop {
+  display: flex;
+  align-items: center;
 }
 
 nav.desktop ul {
@@ -72,349 +77,190 @@ nav.desktop ul {
 }
 
 nav.desktop ul li {
-  margin-left: 20px;
-}
-
-nav.desktop ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 400;
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
-}
-
-nav.desktop ul li a:hover {
-  color: #007bff; /* Soft blue color for hover */
+  margin-left: 16px;
 }
 
 nav.mobile {
   display: none;
-  width: 100%;
 }
 
-nav.mobile ul {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  justify-content: space-between;
-  width: 100%;
-}
-
-nav.mobile ul li {
-  display: inline-block;
-}
-
-nav.mobile ul li a img {
-  height: 32px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .desktop-logo {
-      display: none;
-  }
-
-  nav.desktop {
-      display: none;
+@media (max-width: 768px) {
+  nav.desktop, header .logo {
+    display: none;
   }
 
   nav.mobile {
-      display: block;
+    display: flex;
+    width: 100%;
+  }
+  nav.mobile ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  nav.mobile ul li {
+    margin: 0;
   }
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 20px; /* Optional: to add some horizontal padding */
+
+.main-content{
+position: relative;
+top: 64px;
 }
 
-header .container, main .container {
-  padding: 0 20px; /* Optional: to add some horizontal padding */
-}
-
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-
-.left-column {
-  flex: 0 1 60%;
-  max-width: 60%;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-  margin: 32px 24px;
-}
-.left {
-  flex: 0 1 60%;
-  max-width: 60%;
-  overflow: hidden;
-  margin: 32px 24px;
-}
-
-.right {
-  flex: 1;
-  max-width: 40%;
+.container.thesis-exhibit {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.banner {
+  background-color: #A8BBA2;
+}
+
+.banner .text-banner {
+  padding: 32px 16px;
   text-align: left;
 }
 
-img {
-  width: 100%;
-  height: auto;
+/* Image and video general styles */
+img, video {
+  width: 100%; /* Ensure the image fills the container */
+  overflow: hidden;
+}
+
+.banner .text-banner h1 {
+  font-size: 2.5rem; /* Adjusts the size of the font */
+  color: #333; /* Sets the text color */
+  margin-bottom: 20px; /* Adds space below the h1 */
+  font-weight: bold; /* Makes the font bold */
+}
+
+.banner .text-banner span {
+  display: block; /* Makes span behave like a block element for layout purposes */
+  color: #666; /* Sets the text color, adjust as needed */
+  font-size: 1.5rem; /* Adjusts the size of the font, adjust as needed */
+}
+
+.banner .text-banner button{
   display: block;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#banner {
-  background-color: lightgray;
-  height: auto;
-}
-
-#banner h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-align: left;
-}
-
-
-#banner p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin: 20px 0;
-}
-
-button {
-  display: inline-block; 
+  margin: 24px auto 0;
+  width: 80%;
   padding: 8px 16px;
-  background-color: #333; 
+  background-color: #333;
+  color: #fff;
   border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  border-radius: 4px;
+  font-size: 1.2rem;
 }
 
-button:hover {
-  background-color: #000; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* info  */
+/* base mobile stile  */
+
+.info .image-info {
+  display: none;
 }
 
-#intro h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 32px;
-  margin-bottom: 24px
+.articles-info .image-small {
+  display: none;
 }
 
-#intro h3 {
-  font-size: 18px;
-  font-weight: bold;
+.article  {
+  padding: 16px;
 }
 
-#intro p {
-  margin-bottom: 24px;
+.article:hover {
+  background-color: lightgray;
 }
 
-#intro .right {
-  justify-content: flex-start;
-  margin: 32px 0;
+.article .text-small {
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 16px;
 }
 
-.article-wrapper {
-  display: flex;
-  width: 100%;
-  gap: 16px;
+.article .text-small h3 {
+  font-size: 2rem;
+  color: #333;
   margin-bottom: 16px;
-  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
-.article-wrapper:hover {
-  background-color: lightgrey;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-5px);
-}
 
-.article-wrapper .right-small h3 {
-  margin: 0;
-}
-
-.article-wrapper .right-small .info {
-  color: #666;
-}
-
-.article-wrapper .right-small .read-more {
-  margin-top: 5px;
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.article-wrapper .right-small .read-more:hover {
-  color: #0056b3;
-}
-
-.left-small {
-  flex: 0 1 35%;
-  max-width: 60%;
-  overflow: hidden;
-  margin: 16px;
-}
-
-.right-small {
-  flex: 1;
-  max-width: 65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.right-small .info {
+.article .text-small .read-more {
   margin-top: 8px;
-  margin-bottom: 8px;
-}
-/* portfolio section*/
-#portfolio {
-  background: lightgrey;
-  padding: 32px 72px;
-  
+  font-size: 1rem;
 }
 
-#portfolio .wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: space-between;
+/* cources*/
+.container.courses {
+  background-color: white; /* Light grey background */
+  padding: 32px 16px; /* Padding around the content */
 }
 
-
-#portfolio h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 32px;
-}
-.card {
-  flex: 1 1 calc(33.333% - 32px);
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s;
+.courses h1 {
+  font-size: 2.5rem; /* Adjusts the size of the font */
+  color: #333; /* Sets the text color */
+  margin-bottom: 20px; /* Adds space below the h2 */
+  font-weight: bold; /* Makes the font bold */
+  text-align: center; /* Centers the text */
 }
 
-.card img {
+.course {
   width: 100%;
-  height: auto;
-  display: block;
+  margin-bottom: 8px;
+  padding: 16px 24px 16px;
+  background-color: lightgray;
+  border: 1px solid #ccc;
+  text-align: left;
 }
 
-.card h3 {
-  margin: 16px;
-  font-size: 1.25em;
+.course img, .course h3, course p {
+display: none;
 }
 
-.card p {
-  margin: 16px;
-  font-size: 1em;
-}
-
-
-.card:hover {
-  transform: scale(1.05);
+.course h2 {
+  font-size: 1.5rem;
+  color: #333;
 }
 
 /* thesis*/
-#thesis .right {
-  margin: 32px 0;
-  justify-content: flex-start;
+.thesis .video-text {
+  display: none;
 }
 
-#thesis h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 32px;
-  margin-bottom: 24px
+
+.container.thesis-exhibit {
+  padding: 32px 0 24px;
 }
 
-#thesis h3 {
-  font-size: 18px;
-  font-weight: bold;
+.container.thesis-exhibit h1 {
+  font-size: 2.5rem; /* Adjusts the size of the font */
+  color: #333; /* Sets the text color */
+  margin-bottom: 16px; /* Adds space below the h2 */
+  font-weight: bold; /* Makes the font bold */
+  text-align: center; /* Centers the text */
+
 }
 
-/* General reset and styling for footer */
+.thesis-section {
+  display: none;
+}
 
+/* footer*/
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 16px 0;
   text-align: center;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.terms-privacy {
+  display: none;
 }
 
-.footer_nav {
-  text-align: right;
-}
-
-.footer_nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer_nav ul li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.footer_nav ul li:first-child {
-  margin-left: 0;
-}
-
-.footer_nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-p {
-  margin: 0;
-}
-
-/* Responsive adjustments */
-
-@media (max-width: 768px) {
-  .footer-content {
-      flex-direction: column;
-  }
-  
-  .footer_nav {
-      text-align: center;
-      margin-bottom: 15px;
-  }
-  
-  .footer_nav ul li {
-      display: block;
-      margin: 10px 0;
-  }
-}
 
 
