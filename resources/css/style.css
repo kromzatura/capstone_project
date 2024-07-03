@@ -169,7 +169,7 @@ nav.mobile {
     flex-direction: column;
     
   }
-  .info .image-info {
+  .image-info {
     display: none;
   }
   
@@ -271,4 +271,42 @@ nav.mobile {
   
   .terms-privacy {
     display: none;
+  }
+
+    /* desctop version*/
+  @media screen and (min-width: 768px) {
+    .banner {
+      display: flex;
+      flex-direction: row;
+    }
+    .info {
+      display: flex;
+      flex-direction: row;
+    }
+    .container-left {
+      width: 60%;
+      display: block; /* Adjust display as needed */
+    }
+
+    .container-right {
+      width: 40%;
+      display: block; /* Adjust display as needed */
+    }
+    .article {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+    }
+
+    .article .image-small-mobile {
+      display: none;
+    }
+
+    .article .image-small {
+      display: block;
+      width: 35%;
+    }
+    .text-small {
+      width: 65%;
+    }
   }
