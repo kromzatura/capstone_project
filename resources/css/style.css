@@ -112,13 +112,6 @@ nav.mobile {
   top: 64px;
   }
   
-  .container.thesis-exhibit {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-  
   .banner {
     background-color: #A8BBA2;
   }
