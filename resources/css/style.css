@@ -234,12 +234,13 @@ nav.mobile {
   }
   
   .course h2 {
+    display: block;
     font-size: 1.5rem;
     color: #333;
   }
   
   /* thesis*/
-  .thesis .video-text {
+  .video-text {
     display: none;
   }
   
@@ -273,24 +274,26 @@ nav.mobile {
     display: none;
   }
 
-    /* desctop version*/
+    /* desktop version*/
   @media screen and (min-width: 768px) {
+       /* banner*/
     .banner {
       display: flex;
       flex-direction: row;
     }
+       /*  info*/
     .info {
       display: flex;
       flex-direction: row;
     }
     .container-left {
       width: 60%;
-      display: block; /* Adjust display as needed */
+      display: block; 
     }
 
     .container-right {
       width: 40%;
-      display: block; /* Adjust display as needed */
+      display: block; 
     }
     .article {
       display: flex;
@@ -309,4 +312,66 @@ nav.mobile {
     .text-small {
       width: 65%;
     }
+       /*  courses*/
+     .container.courses {
+      padding: 32px 72px;
+      background-color: lightgray;
+     }
+    .courses-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px; /* Adjust the gap between cards */
+      justify-content: center; /* Center the cards within the container */
+    }
+
+    .course {
+      display: block;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      width: 31%; 
+    }
+
+    .course img {
+      width: 100%;
+      height: auto;
+  
+    }
+    .course img, .course h3, course p {
+      display: block;
+    }
+
+    .course-text {
+      padding: 16px 16px 24px;
+    }
+    .course h3 {
+      margin-top: 0;
+    }
+  /*  info*/
+  .thesis-exhibit {
+    display: block;
   }
+  .thesis {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ads {
+    display: block;
+    width: 60%;
+  }
+  .thesis-section {
+    display: block;
+    width: 40%;
+  }
+
+  .video-text {
+    display: block;
+    padding: 16px;
+  }
+
+
+}
