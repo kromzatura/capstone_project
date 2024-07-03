@@ -191,6 +191,7 @@ img, video {
 
 
 .article .text-small .read-more {
+  display: block;
   margin-top: 8px;
   font-size: 1rem;
 }
