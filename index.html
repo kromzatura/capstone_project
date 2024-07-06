@@ -53,4 +53,51 @@
             <button class="banner__button">Start here</button>
         </div>
     </div>
+
+    <!-- Product section desctop-->
+     <div class="products" id="products">  
+            <div class="intro-card"> <!-- width 60% and it is not visible on mobile, only on desktop-->
+                <img src="./resources/images/information-main.jpg" alt="">
+                <h2 class="intro-card>">Information</h2>
+                <p class="intro-card>">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <span>Emanuel</span>
+            </div>
+        <!-- Product section mobile-->
+            <div class="products__list"> <!-- width 40% direction column-->
+                <div class="product-card"> <!--width-100%-direction row-->
+                    <picture> <!-- width 35%-->
+                        <source srcset="./resources\images\information-orientation.jpg" media="(min-width: 768px)">
+                        <img src="./resources/images/information-orientation-mobile.jpg" alt="">
+                    </picture>
+                    <div class="text-content">
+                    <h3>Information 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <picture>
+                        <source srcset="./resources\images\information-campus.jpg" media="(min-width: 768px)">
+                        <img src="./resources/images/information-campus-mobile.jpg" alt="">
+                    </picture>
+                    <div class="text-content">
+                    <h3>Information 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read more</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <picture>
+                        <source srcset="./resources\images\information-guest-lecture.jpg" media="(min-width: 768px)">
+                        <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="">
+                    </picture>
+                    <div class="text-content">
+                    <h3>Information 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Read more</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <!-- End of Product section -->
 </body>
