@@ -155,10 +155,11 @@ header .container {
     height: 42px;
     margin-right: 10px;
     vertical-align: middle;
-    background-image: url('/resources/images/ic-logo.svg'); /* updated path */
+    background-image: url('/resources/images/ic-logo.svg'); /* Ensure the path is correct */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
 }
 
 nav {
@@ -233,7 +234,7 @@ li img {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    background-color: #f4f4f4;
+    background-color: lightgray;
 }
 
 .banner__image-container {
@@ -300,9 +301,6 @@ li img {
 }
 
 /* Mobile Styles */
-.products__list.special-background {
-    background-color: #f0f0f0; /* Set your desired background color */
-}
 
 .products {
     display: block; /* Default block layout for mobile */
@@ -376,7 +374,7 @@ li img {
         width: 40%; /* Width for the product list */
         display: flex;
         flex-direction: column; /* Stack items vertically */
-        gap: 4px; /* Space between product cards */
+        gap: 16px; /* Space between product cards */
         order: 2; /* Ensure it is on the right side */
     }
 
@@ -501,4 +499,166 @@ li img {
         .gallery-card h2 {
             display: block; /* Show h2 on desktop */
         }
+    }
+    <!-- Summary section mobile-->
+    .summary {
+        display: block; /* Default block layout for mobile */
+    }
+    
+    .summary .intro-card {
+        display: none; /* Hide on mobile */
+    }
+    
+    .summary .summary__list {
+        width: 100%; /* Full width on mobile */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 64px; /* Space between summary cards */
+    }
+    
+    .summary .summary-card {
+        display: flex;
+        flex-direction: column; /* Stack items vertically on mobile */
+        background-color: #fff; /* White background for summary cards */
+        padding: 16px; /* Padding inside summary cards */
+        text-align: left; /* Left align text */
+    }
+    
+    .summary .summary-card picture {
+        width: 100%; /* Full width for the picture on mobile */
+    }
+    
+    .summary .summary-card img {
+        max-width: 100%; /* Ensure image is responsive */
+        height: 100%; /* Maintain aspect ratio */
+        object-fit: cover;
+    }
+    
+    .summary .summary-card .text-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; /* Stack text elements vertically */
+        justify-content: center; /* Center text vertically */
+        margin-left: 16px;
+    }
+    
+    .summary-card .text-content h3 {
+        margin-bottom: 8px;
+    }
+    
+    /* Desktop Styles */
+    @media (min-width: 768px) {
+        .summary {
+            display: flex; /* Enable flexbox layout */
+            flex-direction: row; /* Arrange children in a row */
+            width: 100%; /* Full width on desktop */
+            gap: 24px; /* Space between intro card and summary list */
+            padding: 32px 0 32px 24px;
+        }
+    
+        .summary .intro-card {
+            display: block; /* Show on desktop */
+            width: 60%; /* Width for the information section */
+            order: 1; /* Ensure it is on the left side */
+        }
+    
+        .summary .intro-card video {
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover;
+        }
+    
+        .summary .summary__list {
+            width: 40%; /* Width for the summary list */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            gap: 16px; /* Space between summary cards */
+            order: 2; /* Ensure it is on the right side */
+        }
+    
+        .summary .summary-card {
+            display: flex;
+            padding: 0;
+            flex-direction: row; /* Arrange items in a row */
+            background-color: #fff; /* White background for summary cards */
+            text-align: left; /* Left align text */
+            border: 2px solid #ccc; /* Light gray border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+    
+        .summary .summary-card picture {
+            flex: 0 0 35%; /* Fixed width for the picture */
+            margin: 16px; /* Space to the right of the picture */
+        }
+    
+        .summary .summary-card .text-content {
+            flex: 0 0 65%; /* Set width to 65% */
+            display: flex;
+            height: auto;
+            flex-direction: column; /* Stack text elements vertically */
+            justify-content: center; /* Center text vertically */
+            margin-left: 0px;
+        }
+    
+        .summary-card .text-content h3 {
+            margin-bottom: 8px;
+        }
+    }
+
+    
+    /*  Footer Styles */
+    .new-footer {
+      background-color: #222;
+      color: #fff;
+      padding: 40px 0;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-section {
+      margin: 20px;
+    }
+    
+    .footer-section h4 {
+      margin-bottom: 15px;
+    }
+    
+    .footer-section p, .footer-section a {
+      color: #bbb;
+      text-decoration: none;
+      display: block; /* Makes links stack vertically */
+    }
+    
+    .footer-section a:hover {
+      color: #fff;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-section {
+        margin: 10px 0;
+      }
     }
