@@ -500,7 +500,7 @@ li img {
             display: block; /* Show h2 on desktop */
         }
     }
-    <!-- Summary section mobile-->
+
     .summary {
         display: block; /* Default block layout for mobile */
     }
@@ -606,8 +606,9 @@ li img {
         }
     }
 
+    /* Footer styles */
     
-    /*  Footer Styles */
+    /* New Footer Styles */
     .new-footer {
       background-color: #222;
       color: #fff;
