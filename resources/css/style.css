@@ -500,20 +500,29 @@ li img {
             display: block; /* Show h2 on desktop */
         }
     }
-
+/* summery mobile styles */
     .summary {
         display: block; /* Default block layout for mobile */
     }
     
     .summary .intro-card {
-        display: none; /* Hide on mobile */
+        display: block; /* Hide on mobile */
+        width: 100%; /* Full width on mobile */
+    }
+
+    .summary .intro-card video {
+        max-width: 100%; /* Ensure video is responsive */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+    }
+    .summary .intro-card h2,
+    .summary .intro-card p,
+    .summary .intro-card span {
+        display: none; /* Hide text content on mobile */
     }
     
     .summary .summary__list {
-        width: 100%; /* Full width on mobile */
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        gap: 64px; /* Space between summary cards */
+        display: none;
     }
     
     .summary .summary-card {
@@ -546,7 +555,7 @@ li img {
         margin-bottom: 8px;
     }
     
-    /* Desktop Styles */
+    /* summery desctop styles */
     @media (min-width: 768px) {
         .summary {
             display: flex; /* Enable flexbox layout */
@@ -566,6 +575,16 @@ li img {
             max-width: 100%; /* Ensure image is responsive */
             height: auto; /* Maintain aspect ratio */
             object-fit: cover;
+        }
+
+        .summary .intro-card h2 {
+            display: block; /* Show text content on desktop */
+        }
+        .summary .intro-card p {
+            display: block; /* Show text content on desktop */
+        }
+        .summary .intro-card span {
+            display: block; /* Show text content on desktop */
         }
     
         .summary .summary__list {
@@ -600,66 +619,73 @@ li img {
             justify-content: center; /* Center text vertically */
             margin-left: 0px;
         }
-    
+        
         .summary-card .text-content h3 {
             margin-bottom: 8px;
         }
     }
 
-    /* Footer styles */
     
-    /* New Footer Styles */
+    /* Footer Styles */
     .new-footer {
-      background-color: #222;
-      color: #fff;
-      padding: 40px 0;
+        background-color: #222;
+        color: #fff;
+        padding: 40px 0;
     }
-    
+
     .footer-content {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-    
+
     .footer-section {
-      margin: 20px;
+        margin: 20px;
     }
-    
+
     .footer-section h4 {
-      margin-bottom: 15px;
+        margin-bottom: 15px;
     }
-    
+
     .footer-section p, .footer-section a {
-      color: #bbb;
-      text-decoration: none;
-      display: block; /* Makes links stack vertically */
+        color: #bbb;
+        text-decoration: none;
+        display: block; /* Makes links stack vertically */
     }
-    
+
     .footer-section a:hover {
-      color: #fff;
+        color: #fff;
     }
-    
+
     .social-links a {
-      display: inline-block;
-      margin-right: 10px;
+        display: inline-block;
+        margin-right: 10px;
     }
-    
+    .footer-section.address,
+    .footer-section.follow-us {
+        display: none; /* Hide address and follow-us on mobile */
+    }
+
     .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      border-top: 1px solid #444;
-      padding-top: 20px;
+        display: block; 
+        text-align: center;
+        margin: 0 auto;
+
     }
     
-    @media (max-width: 768px) {
-      .footer-content {
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .footer-section {
-        margin: 10px 0;
-      }
+
+        /* Desktop Styles */
+        @media (min-width: 768px) {
+            .footer-section.address,
+            .footer-section.follow-us {
+                display: block; /* Show address and follow-us on desktop */
+            }
+            .footer-bottom {
+                display: block; 
+                text-align: center;
+                margin: 0 auto;
+
+            }
     }
