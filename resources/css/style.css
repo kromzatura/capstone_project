@@ -1,5 +1,16 @@
 /* Header and navigation styles */
-/* Header and navigation styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container to center content and set max width */
+.container {
+    max-width: 1920px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px; /* Optional padding for small screens */
+}
 
 header {
     background: white;
@@ -71,7 +82,7 @@ li img {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 736px) {
     .logo {
         display: none;
     }
@@ -140,12 +151,14 @@ header .container {
 .logo::before {
     content: "";
     display: inline-block;
-    width: 32px;
+    width: 42px;
     height: 42px;
     margin-right: 10px;
     vertical-align: middle;
     background-image: url('/resources/images/ic-logo.svg'); /* updated path */
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 nav {
@@ -179,7 +192,7 @@ li img {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .logo {
         display: none;
     }
@@ -287,6 +300,10 @@ li img {
 }
 
 /* Mobile Styles */
+.products__list.special-background {
+    background-color: #f0f0f0; /* Set your desired background color */
+}
+
 .products {
     display: block; /* Default block layout for mobile */
 }
@@ -299,7 +316,7 @@ li img {
     width: 100%; /* Full width on mobile */
     display: flex;
     flex-direction: column; /* Stack items vertically */
-    gap: 24px; /* Space between product cards */
+    gap: 64px; /* Space between product cards */
 }
 
 .products .product-card {
@@ -307,25 +324,29 @@ li img {
     flex-direction: column; /* Stack items vertically on mobile */
     background-color: #fff; /* White background for product cards */
     padding: 16px; /* Padding inside product cards */
-    border: 1px solid #ddd; /* Light border around product cards */
-    border-radius: 8px; /* Rounded corners */
     text-align: left; /* Left align text */
 }
 
 .products .product-card picture {
     width: 100%; /* Full width for the picture on mobile */
-    margin-bottom: 16px; /* Space below the picture */
 }
 
 .products .product-card img {
     max-width: 100%; /* Ensure image is responsive */
-    height: auto; /* Maintain aspect ratio */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
 }
 
 .products .product-card .text-content {
     display: flex;
+    justify-content: center;
     flex-direction: column; /* Stack text elements vertically */
     justify-content: center; /* Center text vertically */
+    margin-left: 16px;
+}
+
+.product-card .text-content h3 {
+    margin-bottom: 8px;
 }
 
 /* Desktop Styles */
@@ -335,51 +356,142 @@ li img {
         flex-direction: row; /* Arrange children in a row */
         width: 100%; /* Full width on desktop */
         gap: 24px; /* Space between intro card and product list */
+        padding: 32px 0 32px 24px;
     }
 
     .products .intro-card {
         display: block; /* Show on desktop */
         width: 60%; /* Width for the information section */
         order: 1; /* Ensure it is on the left side */
+
     }
 
     .products .intro-card img {
         max-width: 100%; /* Ensure image is responsive */
         height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
     }
 
     .products .products__list {
         width: 40%; /* Width for the product list */
         display: flex;
         flex-direction: column; /* Stack items vertically */
-        gap: 24px; /* Space between product cards */
+        gap: 4px; /* Space between product cards */
         order: 2; /* Ensure it is on the right side */
     }
 
     .products .product-card {
         display: flex;
+        padding: 0;
         flex-direction: row; /* Arrange items in a row */
         background-color: #fff; /* White background for product cards */
-        padding: 16px; /* Padding inside product cards */
-        border: 1px solid #ddd; /* Light border around product cards */
-        border-radius: 8px; /* Rounded corners */
         text-align: left; /* Left align text */
+        border: 2px solid #ccc; /* Light gray border */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
+
+    .products .product-card.special-background {
+        background-color: lightgray;
+    }
+    
 
     .products .product-card picture {
         flex: 0 0 35%; /* Fixed width for the picture */
-        margin-right: 16px; /* Space to the right of the picture */
-    }
-
-    .products .product-card img {
-        max-width: 100%; /* Ensure image is responsive */
-        height: auto; /* Maintain aspect ratio */
+        margin: 16px; /* Space to the right of the picture */
     }
 
     .products .product-card .text-content {
-        flex: 1; /* Take up remaining space */
+        flex: 0 0 65%; /* Set width to 65% */
         display: flex;
+        height: auto;
         flex-direction: column; /* Stack text elements vertically */
         justify-content: center; /* Center text vertically */
+        margin-left: 0px;
+    }
+
+    .product-card .text-content h3 {
+        margin-bottom: 8px;
+    }
+}
+
+/* Galery styles */
+
+.gallery-section {
+    padding: 32px 16px;
+}
+
+.gallery-grid {
+    display: block;
+}
+
+.gallery-card {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.gallery-card h1,
+.gallery-card h3 {
+    display: block;
+}
+
+.gallery-card h3 {
+    background-color: lightgray;
+    padding: 16px 16px 24px 16px;
+}
+
+.gallery-card h2,
+.gallery-card h4,
+.gallery-card p {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .gallery-section {
+        padding: 32px 72px;
+        background-color: lightgray;
+    }
+
+    .gallery-section h2 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .gallery-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery-card .text-content {
+        padding: 16px;
+    }
+
+    .gallery-card h3 {
+        margin: 0 0 8px 0;
+    }
+
+    .gallery-card h4 {
+        margin: 0 0 8px 0;
+        color: #666;
+    }
+
+    .gallery-card p {
+        margin: 0;
     }
 }
